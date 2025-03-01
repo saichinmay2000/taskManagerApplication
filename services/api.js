@@ -1,6 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const API_URL = "http://192.168.1.7:2500/tasks"
+const API_URL = "https://taskmanagerapplicationbackend.onrender.com/tasks"
 
 const getAuthToken = async () => {
     return await AsyncStorage.getItem("token")

@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password, navigation) => {
         try {
-            const res = await axios.post('http://192.168.1.7:2500/auth/login', { email, password });
+            const res = await axios.post('https://taskmanagerapplicationbackend.onrender.com/auth/login', { email, password });
             await AsyncStorage.setItem('token', res.data.token);
             setUserToken(res.data.token);
             // navigation.replace("HomeScreen");

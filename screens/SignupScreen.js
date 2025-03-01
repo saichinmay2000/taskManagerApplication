@@ -12,7 +12,7 @@ export default function SignupScreen({ navigation }) {
 
     const signup = async () => {
         try {
-            await axios.post('http://192.168.1.7:2500/auth/signup', { name, email, password });
+            await axios.post('https://taskmanagerapplicationbackend.onrender.com/auth/signup', { name, email, password });
             alert('Signup successful! Please login.');
             navigation.navigate('Login');
         } catch (error) {
